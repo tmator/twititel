@@ -1,4 +1,9 @@
 import tweepy
+import os
+
+
+
+os.system('chcp 65001')
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -12,4 +17,4 @@ statuses = api.user_timeline()
 tweets = api.user_timeline()
  
 for tweet in tweets: 
-    print(tweet.id, ": ", (tweet.text.encode("utf-8"))) 
+    print(tweet.id, ": ", (tweet.text))
